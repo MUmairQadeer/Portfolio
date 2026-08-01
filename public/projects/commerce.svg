@@ -2,89 +2,142 @@
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
       <stop stop-color="#0a0a0d"/>
-      <stop offset="1" stop-color="#10131f"/>
+      <stop offset="1" stop-color="#111226"/>
     </linearGradient>
     <linearGradient id="acc" x1="0" y1="0" x2="0" y2="1">
-      <stop stop-color="#4f7cff"/>
+      <stop stop-color="#5b86ff"/>
       <stop offset="1" stop-color="#3b63e0"/>
     </linearGradient>
     <linearGradient id="banner" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#1a2a5e"/>
-      <stop offset="1" stop-color="#0e1326"/>
+      <stop stop-color="#1c2c66"/>
+      <stop offset="1" stop-color="#0d1126"/>
     </linearGradient>
+    <linearGradient id="prod1" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#3b4252"/>
+      <stop offset="1" stop-color="#191c24"/>
+    </linearGradient>
+    <linearGradient id="prod2" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#5a3d2e"/>
+      <stop offset="1" stop-color="#241a12"/>
+    </linearGradient>
+    <linearGradient id="prod3" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#24323f"/>
+      <stop offset="1" stop-color="#10161c"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
   </defs>
 
   <rect width="1200" height="675" fill="url(#bg)"/>
-  <g stroke="#ffffff" stroke-opacity="0.05">
+  <g stroke="#ffffff" stroke-opacity="0.04">
     <path d="M0 112h1200M0 224h1200M0 336h1200M0 448h1200M0 560h1200"/>
     <path d="M150 0v675M300 0v675M450 0v675M600 0v675M750 0v675M900 0v675M1050 0v675"/>
   </g>
 
   <!-- Window + chrome -->
-  <rect x="24" y="24" width="1152" height="627" rx="18" fill="#0e0e11"/>
-  <rect x="24" y="24" width="1152" height="52" rx="18" fill="#121216"/>
-  <rect x="24" y="52" width="1152" height="24" fill="#121216"/>
-  <circle cx="54" cy="50" r="6" fill="#2c2c34"/>
-  <circle cx="76" cy="50" r="6" fill="#2c2c34"/>
-  <circle cx="98" cy="50" r="6" fill="#4f7cff"/>
-  <rect x="430" y="34" width="340" height="30" rx="15" fill="#0c0c0f" stroke="#1f1f25"/>
-  <text x="600" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#5c5c64">atlas.store</text>
+  <rect x="24" y="24" width="1152" height="627" rx="18" fill="#0e0e12" stroke="#20202a" filter="url(#sh)"/>
+  <rect x="24" y="24" width="1152" height="52" rx="18" fill="#141419"/>
+  <rect x="24" y="52" width="1152" height="24" fill="#141419"/>
+  <rect x="24" y="72" width="1152" height="4" fill="#141419"/>
+  <circle cx="56" cy="50" r="6" fill="#ff5f57"/>
+  <circle cx="80" cy="50" r="6" fill="#febc2e"/>
+  <circle cx="104" cy="50" r="6" fill="#28c840"/>
+  <rect x="430" y="34" width="340" height="32" rx="16" fill="#0c0c10" stroke="#26262e"/>
+  <circle cx="452" cy="50" r="4" fill="#3a3a44"/>
+  <text x="600" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#6b6b76">atlas.store</text>
 
   <!-- Store nav -->
-  <text x="56" y="124" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#f5f5f4">Atlas</text>
-  <g font-family="Arial, sans-serif" font-size="13" fill="#7d7d86">
-    <text x="120" y="124">Women</text>
-    <text x="182" y="124">Men</text>
-    <text x="236" y="124">Sale</text>
+  <text x="56" y="130" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f5f4">Atlas</text>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#8a8a94">
+    <text x="120" y="130">Women</text>
+    <text x="184" y="130">Men</text>
+    <text x="240" y="130">Accessories</text>
+    <text x="328" y="130" fill="#4f7cff">Sale</text>
   </g>
-  <rect x="340" y="106" width="180" height="32" rx="16" fill="#0c0c0f" stroke="#1f1f25"/>
-  <text x="360" y="127" font-size="12" fill="#5c5c64">Search…</text>
-  <circle cx="676" cy="122" r="16" fill="#15151a" stroke="#1f1f25"/>
-  <path d="M676 112v20M666 122h20" stroke="#a1a1a6" stroke-width="2" stroke-linecap="round"/>
-  <rect x="760" y="106" width="96" height="32" rx="16" fill="url(#acc)"/>
-  <text x="808" y="127" text-anchor="middle" font-size="13" font-weight="600" fill="#ffffff">Checkout</text>
+  <rect x="380" y="112" width="220" height="34" rx="17" fill="#0c0c10" stroke="#26262e"/>
+  <circle cx="404" cy="129" r="4" fill="none" stroke="#55555f" stroke-width="2"/>
+  <path d="M407 132l6 6" stroke="#55555f" stroke-width="2" stroke-linecap="round"/>
+  <text x="420" y="134" font-family="Arial, sans-serif" font-size="12" fill="#55555f">Search products…</text>
+  <g>
+    <circle cx="680" cy="129" r="17" fill="#15151b" stroke="#26262e"/>
+    <path d="M680 122v14M673 129h14" stroke="#a1a1a6" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="760" cy="129" r="17" fill="#15151b" stroke="#26262e"/>
+    <circle cx="760" cy="126" r="5" fill="none" stroke="#a1a1a6" stroke-width="2"/>
+    <path d="M758 130l5 5" stroke="#a1a1a6" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <rect x="824" y="112" width="108" height="34" rx="17" fill="url(#acc)"/>
+  <text x="878" y="134" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Checkout</text>
 
   <!-- Hero banner -->
-  <rect x="40" y="156" width="1120" height="150" rx="18" fill="url(#banner)" stroke="#1f1f25"/>
-  <text x="72" y="204" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#f5f5f4">Summer drop · up to 40% off</text>
-  <text x="72" y="234" font-family="Arial, sans-serif" font-size="14" fill="#a1a1a6">AI-powered picks for you — curated from 10k products</text>
-  <rect x="72" y="254" width="120" height="34" rx="17" fill="#4f7cff"/>
-  <text x="132" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Shop now</text>
+  <rect x="40" y="166" width="1120" height="148" rx="20" fill="url(#banner)" stroke="#26346b"/>
+  <text x="72" y="212" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#f5f5f4">Summer Drop · up to 40% off</text>
+  <text x="72" y="244" font-family="Arial, sans-serif" font-size="14" fill="#a9b6ea">AI-powered picks, curated from 10,000+ products · free shipping over $50</text>
+  <rect x="72" y="266" width="132" height="36" rx="18" fill="#4f7cff"/>
+  <text x="138" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Shop the drop</text>
+  <rect x="1070" y="178" width="70" height="24" rx="12" fill="#f43f5e"/>
+  <text x="1105" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff">-40%</text>
 
-  <!-- Product grid -->
-  <g>
-    <rect x="40" y="326" width="356" height="210" rx="16" fill="#15151a" stroke="#1f1f25"/>
-    <rect x="56" y="342" width="324" height="128" rx="12" fill="#1c1c24"/>
-    <circle cx="218" cy="406" r="34" fill="#2a2a34"/>
-    <path d="M218 372c-20 0-36 16-36 36 0 8 3 16 8 22h56c5-6 8-14 8-22 0-20-16-36-36-36z" fill="#4f7cff" opacity="0.6"/>
-    <text x="72" y="498" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#e8e8ec">Oversized Tee</text>
-    <text x="72" y="520" font-family="Arial, sans-serif" font-size="13" fill="#4f7cff">$29</text>
+  <!-- Product cards -->
+  <g font-family="Arial, sans-serif">
+    <!-- 1 -->
+    <rect x="40" y="334" width="356" height="220" rx="18" fill="#14141a" stroke="#1f1f27"/>
+    <rect x="56" y="350" width="324" height="120" rx="12" fill="url(#prod1)"/>
+    <path d="M116 410l60 0-20-30z" fill="#5b86ff" opacity="0.35"/>
+    <path d="M196 410l60 0-20-30z" fill="#5b86ff" opacity="0.25"/>
+    <rect x="72" y="488" width="120" height="12" rx="6" fill="#e8e8ec"/>
+    <text x="72" y="522" fill="#f5f5f4" font-size="15" font-weight="600">Cloud Runner Sneakers</text>
+    <text x="72" y="542" fill="#4f7cff" font-size="14" font-weight="700">$89.00</text>
+    <text x="220" y="542" fill="#6b6b76" font-size="12">$119.00</text>
+    <rect x="288" y="484" width="76" height="22" rx="11" fill="#f43f5e"/>
+    <text x="326" y="500" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="700">-25%</text>
+    <g>
+      <path d="M100 460l4 8 8 1-6 6 1 8-7-4-7 4 1-8-6-6 8-1z" fill="#febc2e"/>
+      <path d="M112 460l4 8 8 1-6 6 1 8-7-4-7 4 1-8-6-6 8-1z" fill="#febc2e"/>
+      <path d="M124 460l4 8 8 1-6 6 1 8-7-4-7 4 1-8-6-6 8-1z" fill="#febc2e"/>
+      <path d="M136 460l4 8 8 1-6 6 1 8-7-4-7 4 1-8-6-6 8-1z" fill="#febc2e"/>
+      <path d="M148 460l4 8 8 1-6 6 1 8-7-4-7 4 1-8-6-6 8-1z" fill="#3a3a44"/>
+    </g>
 
-    <rect x="412" y="326" width="356" height="210" rx="16" fill="#15151a" stroke="#1f1f25"/>
-    <rect x="428" y="342" width="324" height="128" rx="12" fill="#1c1c24"/>
-    <rect x="500" y="382" width="180" height="48" rx="8" fill="#2a2a34"/>
-    <path d="M520 402h140M520 414h100M520 402l-14-20h20l10 20M660 402l14-20h-20l-10 20" stroke="#5c5c64" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <text x="444" y="498" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#e8e8ec">Slip-On Sneakers</text>
-    <text x="444" y="520" font-family="Arial, sans-serif" font-size="13" fill="#4f7cff">$89</text>
+    <!-- 2 -->
+    <rect x="412" y="334" width="356" height="220" rx="18" fill="#14141a" stroke="#1f1f27"/>
+    <rect x="428" y="350" width="324" height="120" rx="12" fill="url(#prod2)"/>
+    <rect x="520" y="386" width="140" height="48" rx="10" fill="#6b4a33"/>
+    <rect x="540" y="404" width="100" height="12" rx="6" fill="#3a2a1e"/>
+    <rect x="444" y="488" width="140" height="12" rx="6" fill="#e8e8ec"/>
+    <text x="444" y="522" fill="#f5f5f4" font-size="15" font-weight="600">Heritage Leather Tote</text>
+    <text x="444" y="542" fill="#4f7cff" font-size="14" font-weight="700">$149.00</text>
+    <text x="700" y="542" text-anchor="end" fill="#34d399" font-size="11">Low stock</text>
 
-    <rect x="784" y="326" width="376" height="210" rx="16" fill="#15151a" stroke="#1f1f25"/>
-    <rect x="800" y="342" width="344" height="128" rx="12" fill="#1c1c24"/>
-    <rect x="872" y="382" width="200" height="30" rx="6" fill="#2a2a34"/>
-    <rect x="872" y="424" width="160" height="30" rx="6" fill="#22222a"/>
-    <text x="816" y="498" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#e8e8ec">Minimal Backpack</text>
-    <text x="816" y="520" font-family="Arial, sans-serif" font-size="13" fill="#4f7cff">$64</text>
+    <!-- 3 -->
+    <rect x="784" y="334" width="376" height="220" rx="18" fill="#14141a" stroke="#1f1f27"/>
+    <rect x="800" y="350" width="344" height="120" rx="12" fill="url(#prod3)"/>
+    <rect x="884" y="380" width="176" height="30" rx="8" fill="#1d2a38"/>
+    <rect x="884" y="420" width="120" height="30" rx="8" fill="#16202b"/>
+    <rect x="816" y="488" width="150" height="12" rx="6" fill="#e8e8ec"/>
+    <text x="816" y="522" fill="#f5f5f4" font-size="15" font-weight="600">Everyday Minimal Backpack</text>
+    <text x="816" y="542" fill="#4f7cff" font-size="14" font-weight="700">$64.00</text>
+  </g>
 
-    <rect x="40" y="556" width="356" height="80" rx="16" fill="#15151a" stroke="#1f1f25"/>
-    <rect x="40" y="556" width="356" height="80" rx="16" fill="url(#acc)" opacity="0.08"/>
-    <text x="64" y="596" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#e8e8ec">Runtime — AI recommendation engine</text>
-    <text x="64" y="618" font-family="Arial, sans-serif" font-size="12" fill="#a1a1a6">Personalizes every visitor · +32% AOV</text>
+  <!-- Feature strip -->
+  <g font-family="Arial, sans-serif">
+    <rect x="40" y="574" width="356" height="62" rx="16" fill="#14141a" stroke="#1f1f27"/>
+    <circle cx="72" cy="605" r="12" fill="#20263a"/>
+    <path d="M66 605l4 4 8-8" stroke="#4f7cff" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <text x="94" y="600" fill="#e8e8ec" font-size="13" font-weight="600">AI recommendation engine</text>
+    <text x="94" y="616" fill="#8a8a94" font-size="11">Personalized for every visitor · +32% AOV</text>
 
-    <rect x="412" y="556" width="356" height="80" rx="16" fill="#15151a" stroke="#1f1f25"/>
-    <text x="436" y="596" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#e8e8ec">One-tap checkout</text>
-    <text x="436" y="618" font-family="Arial, sans-serif" font-size="12" fill="#a1a1a6">No account needed · 0.4s time to pay</text>
+    <rect x="412" y="574" width="356" height="62" rx="16" fill="#14141a" stroke="#1f1f27"/>
+    <circle cx="444" cy="605" r="12" fill="#20263a"/>
+    <rect x="438" y="599" width="12" height="12" rx="2" fill="#4f7cff"/>
+    <text x="466" y="600" fill="#e8e8ec" font-size="13" font-weight="600">One-tap checkout</text>
+    <text x="466" y="616" fill="#8a8a94" font-size="11">No account needed · 0.4s time to pay</text>
 
-    <rect x="784" y="556" width="376" height="80" rx="16" fill="#15151a" stroke="#1f1f25"/>
-    <text x="808" y="596" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#e8e8ec">Same-day fulfillment</text>
-    <text x="808" y="618" font-family="Arial, sans-serif" font-size="12" fill="#a1a1a6">Warehouse synced · 99.9% on-time</text>
+    <rect x="784" y="574" width="376" height="62" rx="16" fill="#14141a" stroke="#1f1f27"/>
+    <circle cx="816" cy="605" r="12" fill="#20263a"/>
+    <path d="M810 605c6-6 14-6 20 0" stroke="#4f7cff" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <path d="M830 601l3 4 7-8" stroke="#4f7cff" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <text x="838" y="600" fill="#e8e8ec" font-size="13" font-weight="600">Same-day fulfillment</text>
+    <text x="838" y="616" fill="#8a8a94" font-size="11">Warehouse synced · 99.9% on-time</text>
   </g>
 </svg>
