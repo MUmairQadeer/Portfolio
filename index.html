@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" id="theme-color" content="#0A0A0B" />
+    <title>Umair Qadeer — Full-Stack MERN Developer</title>
+    <meta
+      name="description"
+      content="Full-stack MERN developer and Upwork Top Rated freelancer building fast, scalable web apps for startups and e-commerce brands. React, Node.js, Next.js, MongoDB."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Umair Qadeer — Full-Stack MERN Developer" />
+    <meta
+      property="og:description"
+      content="I build fast, scalable web apps for startups and e-commerce brands. Full-stack MERN developer, Top Rated on Upwork."
+    />
+    <meta property="og:image" content="/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Umair Qadeer — Full-Stack MERN Developer" />
+    <meta
+      name="twitter:description"
+      content="I build fast, scalable web apps for startups and e-commerce brands."
+    />
+    <script>
+      // Apply the saved theme before first paint to avoid a flash of the wrong theme.
+      ;(function () {
+        try {
+          var stored = window.localStorage.getItem('portfolio-theme')
+          var theme = stored === 'light' ? 'light' : 'dark'
+          document.documentElement.classList.remove(theme === 'light' ? 'dark' : 'light')
+          document.documentElement.classList.add(theme)
+          var meta = document.getElementById('theme-color')
+          if (meta) meta.setAttribute('content', theme === 'dark' ? '#0A0A0B' : '#FAFAF9')
+        } catch (e) {
+          /* noop */
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
