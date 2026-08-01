@@ -18,6 +18,7 @@ type ButtonProps = {
   variant?: ButtonVariant
   external?: boolean
   disabled?: boolean
+  type?: 'button' | 'submit'
   className?: string
   children: ReactNode
 } & Omit<React.ComponentPropsWithoutRef<'a'>, 'href' | 'children'>
@@ -31,6 +32,7 @@ export default function Button({
   variant = 'primary',
   external,
   disabled,
+  type = 'button',
   className,
   children,
   ...rest
@@ -57,7 +59,7 @@ export default function Button({
   }
 
   return (
-    <button type="button" disabled={disabled} className={classes} {...(rest as React.ComponentPropsWithoutRef<'button'>)}>
+    <button type={type} disabled={disabled} className={classes} {...(rest as React.ComponentPropsWithoutRef<'button'>)}>
       {children}
     </button>
   )

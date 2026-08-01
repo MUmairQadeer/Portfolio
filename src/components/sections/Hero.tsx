@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion'
 import { ArrowRight, ArrowDown, BadgeCheck } from 'lucide-react'
 import { site, upwork } from '@/data/content'
+import { scrollToSection } from '@/lib/utils'
 import Button from '@/components/ui/Button'
 import Stars from '@/components/ui/Stars'
 
@@ -115,10 +116,10 @@ export default function Hero() {
 
           {/* CTAs */}
           <motion.div variants={item} className="mt-10 flex flex-wrap items-center gap-4">
-            <Button href="#projects">
+            <Button href="#products">
               View My Work <ArrowRight size={16} />
             </Button>
-            <Button href="#contact" variant="secondary">
+            <Button onClick={() => scrollToSection('contact')} variant="secondary">
               Get In Touch
             </Button>
           </motion.div>

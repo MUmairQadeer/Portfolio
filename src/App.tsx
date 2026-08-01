@@ -5,7 +5,7 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
 import Marquee from '@/components/sections/Marquee'
-import Projects from '@/components/sections/Projects'
+import Products from '@/components/sections/Products'
 import Process from '@/components/sections/Process'
 import About from '@/components/sections/About'
 import Testimonials from '@/components/sections/Testimonials'
@@ -20,7 +20,7 @@ export default function App() {
         <main>
           <Hero />
           <Marquee />
-          <Projects />
+          <Products />
           <Process />
           <About />
           <Testimonials />

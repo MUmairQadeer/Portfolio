@@ -139,7 +139,7 @@ export default function About() {
 
             <Reveal delay={0.35}>
               <div className="mt-10">
-                <Button href="#projects" variant="secondary">
+                <Button href="#products" variant="secondary">
                   See how I work <ArrowRight size={16} />
                 </Button>
               </div>

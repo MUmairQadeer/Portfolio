@@ -16,7 +16,7 @@ import { usePrefersReducedMotion } from '@/hooks/usePrefersReducedMotion'
 const ease = [0.22, 1, 0.36, 1] as const
 const PREVIEW_W = 440
 
-export default function Projects() {
+export default function Products() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const [active, setActive] = useState<number | null>(null)
   const [finePointer, setFinePointer] = useState(false)
@@ -45,12 +45,12 @@ export default function Projects() {
   const activeProject = active !== null ? projects[active] : null
 
   return (
-    <Section id="projects">
+    <Section id="products">
       <Container>
         <Reveal>
-          <Badge>Selected Work</Badge>
+          <Badge>Selected Products</Badge>
           <h2 className="mt-6 max-w-2xl font-display text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-            A short list of projects I'd stake my reputation on.
+            A short list of products I'd stake my reputation on.
           </h2>
         </Reveal>
 
@@ -144,18 +144,8 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-accent"
                     >
-                      View case study <ArrowUpRight size={15} />
+                      <GithubIcon size={15} /> View on GitHub <ArrowUpRight size={15} />
                     </a>
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-foreground"
-                      >
-                        <GithubIcon size={15} /> Source
-                      </a>
-                    )}
                   </div>
                 </div>
 

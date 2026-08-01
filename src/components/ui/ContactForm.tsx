@@ -1,75 +1,58 @@
-import { useState, type FormEvent } from 'react'
+import { useState } from 'react'
 import { CheckCircle2, Send } from 'lucide-react'
 import { site } from '@/data/content'
 import Button from '@/components/ui/Button'
 import { cn } from '@/lib/utils'
 
-type Status = 'idle' | 'sending' | 'success' | 'error'
+type Status = 'idle' | 'sending' | 'success'
 
 type ContactFormProps = {
   nameInputRef?: React.RefObject<HTMLInputElement | null>
 }
 
 /**
- * Inquiry form. Sends via FormSubmit (free, no backend — forwards to the
- * owner email). Falls back to a prefilled mailto if the request fails.
+ * Inquiry form. Submits as a normal form POST to FormSubmit, targeting a
+ * hidden iframe so the page never navigates away. This is far more reliable
+ * than the AJAX endpoint (which rejects localhost / non-browser origins).
  *
  * Note: the first submission triggers a one-time activation email from
- * FormSubmit to the owner address. Click the link in it once.
+ * FormSubmit to the owner address — click the link in it once.
  */
 export default function ContactForm({ nameInputRef }: ContactFormProps) {
   const [status, setStatus] = useState<Status>('idle')
 
-  const fallbackMailto = (payload: Record<string, string>) => {
-    const subject = encodeURIComponent(payload.subject || 'Project inquiry')
-    const body = encodeURIComponent(
-      `Hi Umair,\n\n${payload.message}\n\n— ${payload.name}${payload.email ? ` (${payload.email})` : ''}`,
-    )
-    window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`
-  }
-
-  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    const form = e.currentTarget
-    const data = new FormData(form)
-    const payload = {
-      name: String(data.get('name') ?? ''),
-      email: String(data.get('email') ?? ''),
-      subject: String(data.get('subject') ?? 'Project inquiry'),
-      message: String(data.get('message') ?? ''),
-      _template: 'table',
-      _captcha: 'false',
-      _honey: String(data.get('_honey') ?? ''),
-    }
-
+  const onSubmit = () => {
+    if (status === 'sending') return
     setStatus('sending')
-    try {
-      const res = await fetch(`https://formsubmit.co/ajax/${site.email}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(payload),
-      })
-      const json = (await res.json().catch(() => null)) as { success?: string } | null
-      if (res.ok && json?.success === 'true') {
-        form.reset()
-        setStatus('success')
-        setTimeout(() => setStatus('idle'), 6000)
-      } else {
-        fallbackMailto(payload)
-        setStatus('error')
-      }
-    } catch {
-      fallbackMailto(payload)
-      setStatus('error')
-    }
+    // The browser already captured the data and POSTed it into the iframe by
+    // the time the handler returns — we just reflect a friendly state.
+    window.setTimeout(() => setStatus('success'), 2000)
+    window.setTimeout(() => setStatus('idle'), 8000)
   }
 
   const fieldClasses =
     'w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-faint transition-colors focus:border-accent focus:outline-none'
 
   return (
-    <form onSubmit={onSubmit} className="flex flex-col gap-4">
-      {/* Honeypot — hidden from humans */}
+    <form
+      action={`https://formsubmit.co/${site.email}`}
+      method="POST"
+      target="fs-frame"
+      onSubmit={onSubmit}
+      className="flex flex-col gap-4"
+    >
+      {/* Hidden iframe swallows the FormSubmit response so we stay on the page. */}
+      <iframe
+        name="fs-frame"
+        title="FormSubmit delivery"
+        aria-hidden="true"
+        tabIndex={-1}
+        className="hidden"
+      />
+
+      {/* FormSubmit options + honeypot */}
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
       <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" />
 
       <div className="grid gap-4 sm:grid-cols-2">
@@ -136,19 +119,17 @@ export default function ContactForm({ nameInputRef }: ContactFormProps) {
           <CheckCircle2 size={16} /> Message sent — I'll get back to you shortly.
         </p>
       )}
-      {status === 'error' && (
-        <p className="text-sm text-muted">
-          Couldn't reach the mail service, so your email app opened with the message instead.
-          If that also didn't work, email me directly at{' '}
-          <a href={`mailto:${site.email}`} className="font-medium text-accent underline">
-            {site.email}
-          </a>.
-        </p>
-      )}
 
-      <Button className="w-full" disabled={status === 'sending'}>
+      <Button type="submit" className="w-full" disabled={status === 'sending'}>
         {status === 'sending' ? 'Sending…' : 'Send inquiry'} {status === 'idle' && <Send size={15} />}
       </Button>
+
+      <p className="text-center text-xs text-faint">
+        Trouble sending? Email me directly at{' '}
+        <a href={`mailto:${site.email}`} className="font-medium text-accent hover:underline">
+          {site.email}
+        </a>
+      </p>
     </form>
   )
 }

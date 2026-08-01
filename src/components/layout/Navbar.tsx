@@ -9,6 +9,7 @@ import { Menu, X, Sun, Moon, ArrowUpRight } from 'lucide-react'
 import { navItems, site } from '@/data/content'
 import { useTheme } from '@/hooks/useTheme'
 import { useScrollspy } from '@/hooks/useScrollspy'
+import { scrollToSection } from '@/lib/utils'
 import Button from '@/components/ui/Button'
 import { cn } from '@/lib/utils'
 
@@ -88,7 +89,7 @@ export default function Navbar() {
             </button>
 
             <Button
-              href="#contact"
+              onClick={() => scrollToSection('contact')}
               className="hidden md:inline-flex"
               variant="secondary"
             >
@@ -160,8 +161,10 @@ export default function Navbar() {
                 className="mt-auto"
               >
                 <Button
-                  href="#contact"
-                  onClick={() => setOpen(false)}
+                  onClick={() => {
+                    setOpen(false)
+                    scrollToSection('contact')
+                  }}
                   className="w-full"
                 >
                   Hire Me <ArrowUpRight size={16} />

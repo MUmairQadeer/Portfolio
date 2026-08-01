@@ -1,12 +1,12 @@
-import { motion } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
 import { BadgeCheck, ArrowUpRight } from 'lucide-react'
-import { testimonials, upwork } from '@/data/content'
+import { testimonials, upwork, type Testimonial } from '@/data/content'
 import { Section, Container } from '@/components/ui/Section'
 import Badge from '@/components/ui/Badge'
 import Reveal from '@/components/ui/Reveal'
 import Stars from '@/components/ui/Stars'
-
-const ease = [0.22, 1, 0.36, 1] as const
+import { usePrefersReducedMotion } from '@/hooks/usePrefersReducedMotion'
+import { cn } from '@/lib/utils'
 
 function initials(name: string) {
   return name
@@ -18,7 +18,86 @@ function initials(name: string) {
     .toUpperCase()
 }
 
+/**
+ * Quote clamped to a fixed number of lines so every card reads the same
+ * length. If the text overflows, a "Read more" toggle reveals the rest.
+ */
+function ClampedQuote({ text }: { text: string }) {
+  const [expanded, setExpanded] = useState(false)
+  const [overflows, setOverflows] = useState(false)
+  const ref = useRef<HTMLParagraphElement>(null)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const check = () => {
+      setOverflows(el.scrollHeight > el.clientHeight + 1)
+    }
+    check()
+    const ro = new ResizeObserver(check)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [text])
+
+  return (
+    <div>
+      <p
+        ref={ref}
+        className={cn(
+          'text-[15px] leading-relaxed text-foreground/90',
+          !expanded && 'line-clamp-4'
+        )}
+      >
+        "{text}"
+      </p>
+      {overflows && (
+        <button
+          type="button"
+          onClick={() => setExpanded((v) => !v)}
+          className="mt-3 text-sm font-medium text-accent transition-colors hover:text-foreground"
+        >
+          {expanded ? 'Read less' : 'Read more'}
+        </button>
+      )}
+    </div>
+  )
+}
+
+function TestimonialCard({ t }: { t: Testimonial }) {
+  return (
+    <figure className="flex w-[85vw] max-w-[420px] shrink-0 flex-col rounded-2xl border border-border bg-card p-7 transition-colors duration-300 hover:border-border-strong md:w-[420px]">
+      <Stars rating={t.rating ?? 5} size={14} />
+
+      <blockquote className="mt-5 flex-1">
+        <ClampedQuote text={t.quote} />
+      </blockquote>
+
+      <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-5">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent-soft font-display text-sm font-semibold text-accent">
+          {initials(t.name)}
+        </span>
+        <div>
+          <div className="flex items-center gap-1.5 text-sm font-medium text-foreground">
+            {t.name}
+            <BadgeCheck size={14} className="text-accent" aria-label="Verified" />
+          </div>
+          <div className="text-xs text-muted">
+            {t.role} · {t.platform}
+          </div>
+        </div>
+      </figcaption>
+    </figure>
+  )
+}
+
+/**
+ * Auto-scrolling horizontal carousel of reviews. Duplicates the list once so
+ * translateX(-50%) loops seamlessly; pauses on hover; honors reduced motion.
+ */
 export default function Testimonials() {
+  const reduce = usePrefersReducedMotion()
+  const doubled = [...testimonials, ...testimonials]
+
   return (
     <Section id="testimonials">
       <Container>
@@ -61,47 +140,22 @@ export default function Testimonials() {
             </a>
           </Reveal>
         </div>
+      </Container>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((t, i) => (
-            <motion.figure
-              key={t.name}
-              initial={{ opacity: 0, y: 28 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.55, delay: i * 0.1, ease }}
-              className="flex flex-col rounded-2xl border border-border bg-card p-7 transition-colors duration-300 hover:border-border-strong"
-            >
-              <Stars rating={t.rating ?? 5} size={14} />
-
-              <blockquote className="mt-5 flex-1">
-                <p className="text-[15px] leading-relaxed text-foreground/90">"{t.quote}"</p>
-              </blockquote>
-
-              {t.outcome && (
-                <p className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-accent">
-                  <span aria-hidden="true">→</span> {t.outcome}
-                </p>
-              )}
-
-              <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-5">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent-soft font-display text-sm font-semibold text-accent">
-                  {initials(t.name)}
-                </span>
-                <div>
-                  <div className="flex items-center gap-1.5 text-sm font-medium text-foreground">
-                    {t.name}
-                    <BadgeCheck size={14} className="text-accent" aria-label="Verified" />
-                  </div>
-                  <div className="text-xs text-muted">
-                    {t.role} · {t.platform}
-                  </div>
-                </div>
-              </figcaption>
-            </motion.figure>
+      {/* Auto-scroll track */}
+      <div className="mt-12 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+        <div
+          className={cn(
+            'flex w-max gap-6',
+            !reduce && 'animate-marquee hover:[animation-play-state:paused]'
+          )}
+          style={{ animationDuration: '50s' }}
+        >
+          {doubled.map((t, i) => (
+            <TestimonialCard key={`${t.name}-${i}`} t={t} />
           ))}
         </div>
-      </Container>
+      </div>
     </Section>
   )
 }

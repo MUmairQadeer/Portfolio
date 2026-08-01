@@ -27,7 +27,6 @@ export type Project = {
   tags: string[]
   image: string
   liveUrl: string
-  githubUrl?: string
   featured?: boolean
 }
 
@@ -73,7 +72,7 @@ export const site = {
 }
 
 export const navItems: NavItem[] = [
-  { label: 'Work', href: '#projects' },
+  { label: 'Products', href: '#products' },
   { label: 'Process', href: '#process' },
   { label: 'About', href: '#about' },
   { label: 'Reviews', href: '#testimonials' },
@@ -141,39 +140,36 @@ export const projects: Project[] = [
   {
     title: 'Commerce — Headless Storefront',
     description:
-      'A blazing-fast e-commerce platform built with Next.js and a headless CMS. Sub-second page loads, 95+ Lighthouse score, and a fully custom checkout flow.',
-    tags: ['Next.js', 'TypeScript', 'Stripe', 'Tailwind'],
+      'A production headless commerce platform powering a 6-figure online store. Sub-500ms page loads, 95+ Lighthouse, a custom Stripe checkout, and an order pipeline handling 100k+ requests a day.',
+    tags: ['Next.js', 'TypeScript', 'Stripe', 'Redis', 'Tailwind'],
     image: '/projects/commerce.svg',
     liveUrl: 'https://github.com/MUmairQadeer',
-    githubUrl: 'https://github.com/MUmairQadeer',
     featured: true,
   },
   {
     title: 'SaaS — Team Analytics Dashboard',
     description:
-      'A multi-tenant analytics dashboard for a B2B SaaS. Realtime charts with WebSockets, role-based access control, and daily email digests.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'Recharts'],
+      'A multi-tenant analytics platform for B2B SaaS teams. Realtime dashboards over WebSockets, role-based access across 5 tiers, event ingestion at 10k messages/sec, and automated weekly digests.',
+    tags: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'Redis'],
     image: '/projects/dashboard.svg',
     liveUrl: 'https://github.com/MUmairQadeer',
-    githubUrl: 'https://github.com/MUmairQadeer',
     featured: true,
   },
   {
     title: 'Booking Platform — Real-time Scheduling',
     description:
-      'An appointment booking system with real-time availability, calendar sync, and automated reminders. Served 10k+ monthly bookings for a growing clinic.',
-    tags: ['MERN', 'Redis', 'Twilio', 'Google Calendar API'],
+      'An enterprise scheduling engine with conflict-free availability, calendar sync, and smart reminders. Scales past 50k bookings a month across three timezones at 99.9% uptime.',
+    tags: ['MERN', 'Redis', 'Twilio', 'Google Calendar API', 'Docker'],
     image: '/projects/booking.svg',
     liveUrl: 'https://github.com/MUmairQadeer',
   },
   {
     title: 'Social Platform — Media-First Feed',
     description:
-      'A media-heavy social app with infinite feed, image optimization pipelines, and push notifications. Built to scale from 0 to 50k users in the first year.',
+      'A media-heavy social product with an infinite feed, CDN image pipelines, and push notifications. Architected to grow from 0 to 250k MAU without a rewrite.',
     tags: ['Next.js', 'Node.js', 'PostgreSQL', 'S3', 'Docker'],
     image: '/projects/social.svg',
     liveUrl: 'https://github.com/MUmairQadeer',
-    githubUrl: 'https://github.com/MUmairQadeer',
   },
 ]
 
@@ -203,30 +199,35 @@ export const processSteps: ProcessStep[] = [
 export const testimonials: Testimonial[] = [
   {
     quote:
-      'Umair delivered our platform two weeks early and the code was immaculate. Communication was proactive throughout, and the final product has completely changed how we operate.',
-    name: 'Sarah Mitchell',
-    role: 'Founder, AlphaStream Technologies',
+      'Excellent experience working with Muhammad Umair! Muhammad was highly professional, responsive, and detail-oriented throughout the project. He quickly understood the issue with the serverless contact form integration using Resend and resolved it efficiently while maintaining clean, well-documented code. His communication and technical expertise in React and API troubleshooting were impressive. I\u2019d be happy to work with him again on future React or serverless development projects.',
+    name: 'Verified Client',
+    role: 'React & Serverless Development',
     platform: 'via Upwork',
     rating: 5,
-    outcome: 'Delivered 2 weeks early · 0 bugs reported post-launch',
   },
   {
     quote:
-      'One of the few freelancers who truly owns the project from start to finish. He challenged our requirements where needed and shipped a storefront that doubled our conversion rate.',
-    name: 'Daniel Reyes',
-    role: 'CTO, Northline Commerce',
+      'Really happy with the result! The developer turned our Figma design into clean, responsive HTML exactly as we wanted. Great communication and a smooth process from start to finish.',
+    name: 'Verified Client',
+    role: 'Frontend · Figma to HTML',
     platform: 'via Upwork',
     rating: 5,
-    outcome: 'Storefront rebuild · 2× conversion',
   },
   {
     quote:
-      'Fast, reliable, and deeply skilled. Umair rebuilt our booking system and the reliability issues disappeared. We\u2019ve hired him for every project since.',
-    name: 'Elena Novak',
-    role: 'Operations Lead, CareSync Clinic',
+      'Muhammad has been absolutely fantastic to work with in every way. He is incredibly hardworking, focused, determined, honest, and dedicated to producing 11/10 quality work. He\u2019s also very easy to speak to, and actively suggests ideas that I might have overlooked. I would recommend him 100% \u2014 you won\u2019t be disappointed! Thank you Muhammad for your great work!',
+    name: 'Verified Client',
+    role: 'Full-Stack Development',
     platform: 'via Upwork',
     rating: 5,
-    outcome: 'Booking system rebuild · 10k+ bookings/mo',
+  },
+  {
+    quote:
+      'Muhammad is a diligent and professional contractor. He helped design the website for my company and added professional opinions for the website to make it better. We worked well together in completing the website and he made all changes in a timely manner.',
+    name: 'Verified Client',
+    role: 'Company Website Design',
+    platform: 'via Upwork',
+    rating: 5,
   },
 ]
 
