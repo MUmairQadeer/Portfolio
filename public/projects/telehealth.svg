@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#08080b"/>
+      <stop stop-color="#07070a"/>
       <stop offset="1" stop-color="#0d1322"/>
     </linearGradient>
     <linearGradient id="acc" x1="0" y1="0" x2="0" y2="1">
@@ -9,15 +9,42 @@
       <stop offset="1" stop-color="#3b63e0"/>
     </linearGradient>
     <linearGradient id="vid" x1="0" y1="0" x2="0" y2="1">
-      <stop stop-color="#1a1f2e"/>
-      <stop offset="1" stop-color="#10131d"/>
+      <stop stop-color="#1a2030"/>
+      <stop offset="1" stop-color="#0f1420"/>
     </linearGradient>
     <radialGradient id="glow" cx="0.5" cy="0.42" r="0.55">
       <stop stop-color="#4f7cff" stop-opacity="0.35"/>
       <stop offset="1" stop-color="#4f7cff" stop-opacity="0"/>
     </radialGradient>
-    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000000" flood-opacity="0.5"/>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#e9b58a"/>
+      <stop offset="1" stop-color="#c68a5f"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#4a3122"/>
+      <stop offset="1" stop-color="#241610"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#5b86ff"/>
+      <stop offset="1" stop-color="#2c4470"/>
+    </linearGradient>
+    <linearGradient id="av1" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ff9a9e"/>
+      <stop offset="1" stop-color="#d65b78"/>
+    </linearGradient>
+    <linearGradient id="av2" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#a1c4fd"/>
+      <stop offset="1" stop-color="#5b86ff"/>
+    </linearGradient>
+    <linearGradient id="av3" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ffd194"/>
+      <stop offset="1" stop-color="#d99a3d"/>
+    </linearGradient>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <filter id="card" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.08"/>
     </filter>
   </defs>
 
@@ -28,112 +55,194 @@
   </g>
 
   <!-- Window + chrome -->
-  <rect x="24" y="24" width="1152" height="627" rx="18" fill="#0d0d11" stroke="#20202a" filter="url(#sh)"/>
+  <rect x="24" y="24" width="1152" height="627" rx="18" fill="#0d0d11" stroke="#1c1c26" filter="url(#sh)"/>
   <rect x="24" y="24" width="1152" height="52" rx="18" fill="#141419"/>
   <rect x="24" y="52" width="1152" height="24" fill="#141419"/>
   <rect x="24" y="72" width="1152" height="4" fill="#141419"/>
+  <rect x="24" y="24" width="1152" height="2" fill="#ffffff" opacity="0.05"/>
   <circle cx="56" cy="50" r="6" fill="#ff5f57"/>
   <circle cx="80" cy="50" r="6" fill="#febc2e"/>
   <circle cx="104" cy="50" r="6" fill="#28c840"/>
   <rect x="430" y="34" width="340" height="32" rx="16" fill="#0c0c10" stroke="#26262e"/>
-  <circle cx="452" cy="50" r="4" fill="#3a3a44"/>
-  <text x="600" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#6b6b76">aura.care/session</text>
+  <rect x="430" y="34" width="30" height="32" rx="16" fill="#26262e"/>
+  <path d="M444 42v8a4 4 0 0 0 8 0v-8M446 42v4" stroke="#34d399" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <text x="460" y="55" font-family="Arial, sans-serif" font-size="14" fill="#6b6b76">aura.care/session</text>
   <rect x="1040" y="38" width="108" height="24" rx="12" fill="#1d232f"/>
-  <text x="1094" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#34d399">● HIPAA</text>
+  <text x="1094" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#7ee2a8">● HIPAA</text>
+
+  <!-- App background -->
+  <rect x="24" y="76" width="1152" height="575" fill="#f7f8fb"/>
+  <rect x="24" y="76" width="1152" height="2" fill="#e5e7eb"/>
 
   <!-- Left: appointments -->
-  <rect x="40" y="92" width="300" height="543" rx="14" fill="#121217"/>
-  <text x="60" y="126" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#f5f5f4">Appointments</text>
-  <text x="60" y="146" font-family="Arial, sans-serif" font-size="12" fill="#6b6b76">March 3 · 12 scheduled</text>
+  <rect x="40" y="92" width="300" height="543" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="60" y="128" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#111827">Appointments</text>
+  <text x="60" y="148" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">March 3 · 12 scheduled</text>
   <g font-family="Arial, sans-serif">
-    <!-- active -->
-    <rect x="56" y="168" width="268" height="78" rx="13" fill="#1a2130" stroke="#33427a"/>
-    <rect x="72" y="184" width="40" height="12" rx="6" fill="#4f7cff"/>
-    <rect x="120" y="184" width="60" height="12" rx="6" fill="#3a3a44"/>
-    <rect x="72" y="206" width="110" height="10" rx="5" fill="#2c2c36"/>
-    <text x="72" y="232" fill="#e8e8ec" font-size="12">09:00 · Sarah Mitchell</text>
-    <rect x="256" y="184" width="56" height="22" rx="11" fill="#c62828"/>
-    <text x="284" y="200" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="700">LIVE</text>
+    <rect x="56" y="170" width="268" height="82" rx="13" fill="#eef2ff" stroke="#c7d6ff"/>
+    <circle cx="86" cy="196" r="16" fill="url(#av1)"/>
+    <text x="86" y="201" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">SM</text>
+    <text x="110" y="190" fill="#111827" font-size="12" font-weight="600">Sarah Mitchell</text>
+    <text x="110" y="208" fill="#6b7280" font-size="11">Cardiology · Video</text>
+    <text x="110" y="238" fill="#6b7280" font-size="11">09:00 – 09:30</text>
+    <rect x="256" y="180" width="56" height="22" rx="11" fill="#ef4444"/>
+    <circle cx="266" cy="191" r="3" fill="#ffffff" opacity="0.9"/>
+    <text x="276" y="196" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">LIVE</text>
 
-    <!-- next -->
-    <rect x="56" y="258" width="268" height="64" rx="13" fill="#15151b" stroke="#1f1f27"/>
-    <text x="72" y="284" fill="#e8e8ec" font-size="12">09:30 · David Chen</text>
-    <text x="72" y="304" fill="#8a8a94" font-size="11">Cardiology follow-up</text>
-    <rect x="260" y="274" width="52" height="22" rx="11" fill="#1c2233"/>
-    <text x="286" y="290" text-anchor="middle" fill="#8a8a94" font-size="10">Up next</text>
+    <rect x="56" y="264" width="268" height="64" rx="13" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="86" cy="290" r="16" fill="url(#av2)"/>
+    <text x="86" y="295" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">DC</text>
+    <text x="110" y="284" fill="#111827" font-size="12" font-weight="600">David Chen</text>
+    <text x="110" y="302" fill="#6b7280" font-size="11">Cardiology follow-up</text>
+    <rect x="260" y="278" width="52" height="22" rx="11" fill="#f3f4f6"/>
+    <text x="286" y="294" text-anchor="middle" fill="#6b7280" font-size="10">Up next</text>
 
-    <rect x="56" y="334" width="268" height="64" rx="13" fill="#15151b" stroke="#1f1f27"/>
-    <text x="72" y="360" fill="#e8e8ec" font-size="12">10:00 · Amina Yusuf</text>
-    <text x="72" y="380" fill="#8a8a94" font-size="11">Dermatology consult</text>
-    <rect x="260" y="350" width="52" height="22" rx="11" fill="#1c2233"/>
-    <text x="286" y="366" text-anchor="middle" fill="#8a8a94" font-size="10">Booked</text>
+    <rect x="56" y="340" width="268" height="64" rx="13" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="86" cy="366" r="16" fill="url(#av3)"/>
+    <text x="86" y="371" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">AY</text>
+    <text x="110" y="360" fill="#111827" font-size="12" font-weight="600">Amina Yusuf</text>
+    <text x="110" y="378" fill="#6b7280" font-size="11">Dermatology consult</text>
+    <rect x="260" y="354" width="52" height="22" rx="11" fill="#f3f4f6"/>
+    <text x="286" y="370" text-anchor="middle" fill="#6b7280" font-size="10">Booked</text>
 
-    <rect x="56" y="410" width="268" height="64" rx="13" fill="#15151b" stroke="#1f1f27"/>
-    <text x="72" y="436" fill="#e8e8ec" font-size="12">10:30 · Liam O'Neil</text>
-    <text x="72" y="456" fill="#8a8a94" font-size="11">New patient intake</text>
-    <rect x="260" y="426" width="52" height="22" rx="11" fill="#1c2233"/>
-    <text x="286" y="442" text-anchor="middle" fill="#8a8a94" font-size="10">Booked</text>
+    <rect x="56" y="416" width="268" height="64" rx="13" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="86" cy="442" r="16" fill="url(#av1)"/>
+    <text x="86" y="447" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">LO</text>
+    <text x="110" y="436" fill="#111827" font-size="12" font-weight="600">Liam O'Neil</text>
+    <text x="110" y="454" fill="#6b7280" font-size="11">New patient intake</text>
+    <rect x="260" y="430" width="52" height="22" rx="11" fill="#f3f4f6"/>
+    <text x="286" y="446" text-anchor="middle" fill="#6b7280" font-size="10">Booked</text>
   </g>
-  <rect x="56" y="500" width="268" height="40" rx="20" fill="url(#acc)"/>
-  <text x="190" y="526" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">+ New appointment</text>
-  <text x="60" y="596" font-family="Arial, sans-serif" font-size="11" fill="#55555f">● Encrypted end-to-end · TLS 1.3</text>
+  <rect x="56" y="504" width="268" height="40" rx="20" fill="url(#acc)"/>
+  <path d="M76 524h12M82 518v12" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <text x="104" y="529" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">New appointment</text>
+  <text x="60" y="600" font-family="Arial, sans-serif" font-size="11" fill="#9ca3af">● End-to-end encrypted · TLS 1.3</text>
+  <text x="60" y="618" font-family="Arial, sans-serif" font-size="11" fill="#9ca3af">● Recorded with consent</text>
 
   <!-- Video area -->
-  <rect x="356" y="92" width="788" height="543" rx="14" fill="url(#vid)" stroke="#1f1f27"/>
+  <rect x="356" y="92" width="788" height="543" rx="14" fill="url(#vid)" stroke="#1f2937" filter="url(#card)"/>
   <rect x="356" y="92" width="788" height="543" rx="14" fill="url(#glow)"/>
+  <circle cx="420" cy="560" r="90" fill="#4f7cff" opacity="0.08"/>
+  <circle cx="1080" cy="180" r="120" fill="#34d399" opacity="0.05"/>
 
-  <rect x="356" y="92" width="120" height="36" rx="18" fill="#c62828"/>
-  <circle cx="380" cy="110" r="4" fill="#ffffff"/>
-  <text x="416" y="116" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">LIVE</text>
+  <!-- LIVE + timer -->
+  <rect x="372" y="108" width="96" height="34" rx="17" fill="#ef4444"/>
+  <circle cx="392" cy="125" r="4" fill="#ffffff"/>
+  <text x="406" y="131" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">LIVE</text>
+  <rect x="1000" y="108" width="128" height="34" rx="17" fill="#111827" opacity="0.6"/>
+  <circle cx="1020" cy="125" r="4" fill="#34d399"/>
+  <text x="1032" y="130" font-family="Arial, sans-serif" font-size="12" fill="#f5f5f4">00:17:32</text>
 
-  <!-- Patient video: person -->
+  <!-- Title -->
+  <text x="372" y="160" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#f5f5f4">Sarah Mitchell — Video Visit</text>
+  <text x="372" y="180" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">Dr. Amin · Cardiology · 24 min remaining</text>
+
+  <!-- Vitals chip -->
+  <rect x="700" y="196" width="228" height="40" rx="20" fill="#111827" opacity="0.6"/>
+  <text x="718" y="222" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#f5f5f4">HR 72</text>
+  <text x="760" y="222" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">bpm</text>
+  <path d="M786 212l6 0 3 6 5-12 4 10 2-4h8" stroke="#34d399" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="830" y="222" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#f5f5f4">98%</text>
+  <text x="884" y="222" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">SpO₂</text>
+
+  <!-- Patient -->
   <g>
-    <circle cx="750" cy="330" r="70" fill="#232b3f"/>
-    <circle cx="750" cy="300" r="26" fill="#3a4b6e"/>
-    <path d="M750 268c-20 0-36 16-36 36 0 9 3 17 9 23h54c6-6 9-14 9-23 0-20-16-36-36-36z" fill="#5b86ff"/>
-    <path d="M690 396c8-34 30-52 60-52s52 18 60 52c-14 22-34 34-60 34s-46-12-60-34z" fill="#2c3650"/>
-    <circle cx="688" cy="352" r="10" fill="#f5f5f4"/>
-    <circle cx="812" cy="352" r="10" fill="#f5f5f4"/>
+    <ellipse cx="830" cy="594" rx="120" ry="16" fill="#000000" opacity="0.4"/>
+    <circle cx="830" cy="356" r="64" fill="#2c3b55"/>
+    <path d="M766 340c2-36 26-60 64-60s62 24 64 60c-16 12-40 18-64 18s-48-6-64-18z" fill="url(#hair)"/>
+    <path d="M798 322c10-8 22-12 34-12" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.12"/>
+    <path d="M766 348a64 64 0 0 1 128 0c0 12-4 22-10 30h-108c-6-8-10-18-10-30z" fill="url(#skin)"/>
+    <circle cx="804" cy="352" r="5" fill="#ffffff" opacity="0.7"/>
+    <circle cx="856" cy="352" r="5" fill="#ffffff" opacity="0.7"/>
+    <path d="M786 344c4-3 8-3 12 0" stroke="#7a4f33" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <path d="M862 344c4-3 8-3 12 0" stroke="#7a4f33" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <path d="M806 382c8 6 18 6 26 0" stroke="#b9835c" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <ellipse cx="792" cy="364" r="9" fill="#ffffff"/>
+    <ellipse cx="868" cy="364" r="9" fill="#ffffff"/>
+    <ellipse cx="792" cy="364" r="5" fill="#7a4f33"/>
+    <ellipse cx="868" cy="364" r="5" fill="#7a4f33"/>
+    <path d="M746 486c4-64 30-98 84-98s80 34 84 98c-30 38-104 46-168 16z" fill="url(#shirt)"/>
+    <path d="M830 388c-22 0-40 16-42 40 0 12 4 24 10 34 12-14 20-22 32-30 12 8 20 16 32 30 6-10 10-22 10-34-2-24-20-40-42-40z" fill="#22365c"/>
   </g>
-  <rect x="700" y="560" width="100" height="26" rx="13" fill="#151b26" stroke="#262c3a"/>
-  <text x="750" y="579" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#f5f5f4">Sarah Mitchell</text>
-
-  <g font-family="Arial, sans-serif" font-size="12">
-    <text x="700" y="124" fill="#f5f5f4" font-size="17" font-weight="600">Sarah Mitchell — Video Visit</text>
-    <text x="700" y="144" fill="#8a8a94">Dr. Amin · Cardiology · 24 min remaining</text>
-  </g>
+  <rect x="756" y="546" width="148" height="30" rx="15" fill="#111827" opacity="0.7"/>
+  <text x="830" y="566" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#f5f5f4">Sarah Mitchell</text>
 
   <!-- Doctor self view -->
-  <rect x="884" y="196" width="150" height="104" rx="13" fill="#141822" stroke="#262c3a"/>
-  <circle cx="959" cy="232" r="20" fill="#2c3650"/>
-  <circle cx="959" cy="224" r="8" fill="#5b86ff"/>
-  <path d="M941 254c5-16 17-24 36-24 19 0 31 8 36 24-8 13-21 20-36 20s-28-7-36-20z" fill="#232b3f"/>
-  <rect x="890" y="268" width="138" height="22" rx="11" fill="#151b26" stroke="#262c3a"/>
-  <text x="959" y="284" text-anchor="middle" font-size="11" fill="#a1a1a6">You · Dr. Amin</text>
+  <rect x="966" y="96" width="162" height="118" rx="13" fill="#111827" opacity="0.85" stroke="#2c364a"/>
+  <circle cx="1047" cy="140" r="22" fill="#2c3650"/>
+  <path d="M1025 134c1-14 9-24 22-24s21 10 22 24c-5 5-13 7-22 7s-17-2-22-7z" fill="#4a3a2e"/>
+  <path d="M1025 142a22 22 0 0 1 44 0c0 5-2 9-5 12h-34c-3-3-5-7-5-12z" fill="url(#skin)"/>
+  <path d="M1047 156c8 0 14 6 14 14v8h-28v-8c0-8 6-14 14-14z" fill="#22365c"/>
+  <rect x="974" y="172" width="146" height="26" rx="13" fill="#111827" stroke="#2c364a"/>
+  <text x="1047" y="189" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#d1d5db">You · Dr. Amin</text>
 
-  <!-- Call controls -->
-  <g>
-    <rect x="672" y="600" width="156" height="50" rx="25" fill="#141822" stroke="#262c3a"/>
-    <circle cx="700" cy="625" r="15" fill="#232b3f"/>
-    <rect x="690" y="620" width="20" height="10" rx="4" fill="#a1a1a6"/>
-    <circle cx="750" cy="625" r="15" fill="#232b3f"/>
-    <path d="M744 619h12v12M756 619l-12 12" stroke="#a1a1a6" stroke-width="2" stroke-linecap="round"/>
-    <circle cx="800" cy="625" r="15" fill="#c62828"/>
-    <path d="M800 617c-9 0-16 7-16 16v4l14-6v-8l-14-6v4" fill="#ffffff" transform="translate(0 -2)"/>
+  <!-- AI transcript caption -->
+  <rect x="612" y="532" width="520" height="40" rx="20" fill="#111827" opacity="0.75"/>
+  <text x="634" y="549" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" font-style="italic">AI transcript ·</text>
+  <text x="720" y="549" font-family="Arial, sans-serif" font-size="12" fill="#f5f5f4">"Everything looks great — I'll send your prescription now."</text>
+  <text x="720" y="565" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Dr. Amin · just now</text>
+
+  <!-- Controls -->
+  <rect x="660" y="586" width="424" height="42" rx="21" fill="#111827" opacity="0.85"/>
+  <circle cx="692" cy="607" r="15" fill="#232b3f"/>
+  <rect x="682" y="602" width="20" height="10" rx="4" fill="#d1d5db"/>
+  <circle cx="744" cy="607" r="15" fill="#232b3f"/>
+  <rect x="736" y="602" width="16" height="10" rx="4" fill="#d1d5db"/>
+  <path d="M748 600h8v8" stroke="#d1d5db" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <circle cx="796" cy="607" r="15" fill="#232b3f"/>
+  <path d="M790 602h6l4 4 4-4h6v10h-6" stroke="#d1d5db" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <circle cx="848" cy="607" r="15" fill="#232b3f"/>
+  <path d="M842 602l6 5-6 5" stroke="#d1d5db" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M848 605v4" stroke="#d1d5db" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="1000" cy="607" r="17" fill="#ef4444"/>
+  <path d="M1000 598c-9 0-16 7-16 16v4l14-6v-8l-14-6v4" fill="#ffffff"/>
+  <text x="958" y="600" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af">01:00</text>
+
+  <!-- Pre-visit summary -->
+  <rect x="372" y="200" width="300" height="150" rx="14" fill="#f7f8fb" stroke="#e5e7eb"/>
+  <text x="392" y="228" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#111827">Pre-visit summary</text>
+  <g font-family="Arial, sans-serif" font-size="12">
+    <circle cx="400" cy="248" r="3" fill="#10b981"/>
+    <text x="412" y="252" fill="#6b7280">BP 128/84 · HR 72 · SpO₂ 98%</text>
+    <circle cx="400" cy="272" r="3" fill="#f59e0b"/>
+    <text x="412" y="276" fill="#6b7280">Allergies: Penicillin</text>
+    <circle cx="400" cy="296" r="3" fill="#3b63e0"/>
+    <text x="412" y="300" fill="#6b7280">Last visit: 6 weeks ago</text>
+    <circle cx="400" cy="320" r="3" fill="#94a3b8"/>
+    <text x="412" y="324" fill="#6b7280">Medications: Metoprolol 25mg</text>
+    <text x="412" y="344" fill="#3b63e0">View chart →</text>
   </g>
 
-  <!-- Notes panel -->
-  <rect x="356" y="160" width="320" height="150" rx="14" fill="#10141f" stroke="#1f1f27"/>
-  <text x="376" y="190" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#e8e8ec">Pre-visit summary</text>
-  <g font-family="Arial, sans-serif" font-size="12" fill="#9a9aa4">
-    <text x="376" y="214">BP 128/84 · HR 72 · SpO₂ 98%</text>
-    <text x="376" y="234">Allergies: Penicillin</text>
-    <text x="376" y="254">Last visit: 6 weeks ago</text>
-    <text x="376" y="274" fill="#4f7cff">View chart →</text>
-  </g>
+  <!-- In-call notes -->
+  <rect x="372" y="364" width="300" height="120" rx="14" fill="#f7f8fb" stroke="#e5e7eb"/>
+  <text x="392" y="392" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#111827">In-call notes</text>
+  <rect x="392" y="408" width="260" height="28" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="406" y="427" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">Patient reports reduced chest tightness</text>
+  <rect x="392" y="444" width="212" height="22" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="406" y="459" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">Increases dosage of current meds</text>
+  <rect x="392" y="472" width="96" height="24" rx="12" fill="#eef2ff"/>
+  <text x="440" y="489" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#3b63e0" font-weight="600">AI summary</text>
 
-  <rect x="356" y="326" width="320" height="120" rx="14" fill="#10141f" stroke="#1f1f27"/>
-  <text x="376" y="356" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#e8e8ec">In-call notes</text>
-  <rect x="376" y="372" width="280" height="30" rx="8" fill="#151b26"/>
-  <rect x="376" y="410" width="240" height="22" rx="8" fill="#151b26"/>
+  <!-- Actions -->
+  <rect x="372" y="496" width="144" height="38" rx="19" fill="url(#acc)"/>
+  <text x="444" y="521" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#ffffff">Send rx →</text>
+  <rect x="528" y="496" width="144" height="38" rx="19" fill="#ffffff" stroke="#c7d6ff"/>
+  <text x="600" y="521" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#3b63e0">End &amp; summarize</text>
+
+  <g font-family="Arial, sans-serif">
+    <text x="372" y="570" font-size="10" letter-spacing="1" fill="#9ca3af">VOICE LEVEL</text>
+    <g fill="#4f7cff" opacity="0.65">
+      <rect x="372" y="584" width="6" height="12" rx="3"/>
+      <rect x="384" y="576" width="6" height="20" rx="3"/>
+      <rect x="396" y="580" width="6" height="16" rx="3"/>
+      <rect x="408" y="572" width="6" height="24" rx="3"/>
+      <rect x="420" y="578" width="6" height="18" rx="3"/>
+      <rect x="432" y="584" width="6" height="12" rx="3"/>
+    </g>
+    <circle cx="468" cy="590" r="4" fill="#ef4444"/>
+    <text x="480" y="594" font-size="10" fill="#9ca3af">Recording</text>
+  </g>
+  <path d="M640 300l-2-2 2 9 1.6-3.2 4.2 2.3z" fill="#f5f5f4" stroke="#0d0d11" stroke-width="1" stroke-linejoin="round"/>
+
+  <rect x="24" y="24" width="1152" height="627" rx="18" fill="#000000" opacity="0.04"/>
 </svg>

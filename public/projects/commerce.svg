@@ -8,24 +8,38 @@
       <stop stop-color="#5b86ff"/>
       <stop offset="1" stop-color="#3b63e0"/>
     </linearGradient>
-    <linearGradient id="banner" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#1c2c66"/>
-      <stop offset="1" stop-color="#0d1126"/>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#eef2ff"/>
+      <stop offset="1" stop-color="#f5f3ff"/>
     </linearGradient>
-    <linearGradient id="prod1" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#3b4252"/>
-      <stop offset="1" stop-color="#191c24"/>
+    <linearGradient id="sneak1" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#d7dce6"/>
+      <stop offset="1" stop-color="#8a93a5"/>
     </linearGradient>
-    <linearGradient id="prod2" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#5a3d2e"/>
-      <stop offset="1" stop-color="#241a12"/>
+    <linearGradient id="sneak2" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#5b86ff"/>
+      <stop offset="1" stop-color="#3b63e0"/>
+    </linearGradient>
+    <linearGradient id="watchb" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#8a5a34"/>
+      <stop offset="1" stop-color="#4a2f1a"/>
+    </linearGradient>
+    <linearGradient id="watchf" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#e6e9f2"/>
+      <stop offset="1" stop-color="#c3c9db"/>
     </linearGradient>
     <linearGradient id="prod3" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#24323f"/>
-      <stop offset="1" stop-color="#10161c"/>
+      <stop stop-color="#26313c"/>
+      <stop offset="1" stop-color="#141a21"/>
     </linearGradient>
-    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000000" flood-opacity="0.5"/>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <filter id="card" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <filter id="prodsh" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#334155" flood-opacity="0.28"/>
     </filter>
   </defs>
 
@@ -36,108 +50,199 @@
   </g>
 
   <!-- Window + chrome -->
-  <rect x="24" y="24" width="1152" height="627" rx="18" fill="#0e0e12" stroke="#20202a" filter="url(#sh)"/>
+  <rect x="24" y="24" width="1152" height="627" rx="18" fill="#0e0e12" stroke="#1c1c26" filter="url(#sh)"/>
   <rect x="24" y="24" width="1152" height="52" rx="18" fill="#141419"/>
   <rect x="24" y="52" width="1152" height="24" fill="#141419"/>
   <rect x="24" y="72" width="1152" height="4" fill="#141419"/>
+  <rect x="24" y="24" width="1152" height="2" fill="#ffffff" opacity="0.05"/>
   <circle cx="56" cy="50" r="6" fill="#ff5f57"/>
   <circle cx="80" cy="50" r="6" fill="#febc2e"/>
   <circle cx="104" cy="50" r="6" fill="#28c840"/>
   <rect x="430" y="34" width="340" height="32" rx="16" fill="#0c0c10" stroke="#26262e"/>
-  <circle cx="452" cy="50" r="4" fill="#3a3a44"/>
-  <text x="600" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#6b6b76">atlas.store</text>
+  <rect x="430" y="34" width="30" height="32" rx="16" fill="#26262e"/>
+  <circle cx="446" cy="50" r="4" fill="#34d399"/>
+  <text x="460" y="55" font-family="Arial, sans-serif" font-size="14" fill="#6b6b76">atlas.store</text>
+
+  <!-- App background -->
+  <rect x="24" y="76" width="1152" height="575" fill="#f8fafc"/>
+  <rect x="24" y="76" width="1152" height="2" fill="#e2e8f0"/>
+
+  <!-- Announcement bar -->
+  <rect x="40" y="88" width="1120" height="22" rx="11" fill="#1e1b4b"/>
+  <circle cx="62" cy="99" r="3" fill="#34d399"/>
+  <text x="72" y="103" font-family="Arial, sans-serif" font-size="10" fill="#c7d2fe">Free shipping over $50 · Code SPRING25</text>
+  <text x="1128" y="103" text-anchor="end" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#a5b4fc">Summer Drop · up to 40% off</text>
 
   <!-- Store nav -->
-  <text x="56" y="130" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f5f4">Atlas</text>
-  <g font-family="Arial, sans-serif" font-size="13" fill="#8a8a94">
-    <text x="120" y="130">Women</text>
-    <text x="184" y="130">Men</text>
-    <text x="240" y="130">Accessories</text>
-    <text x="328" y="130" fill="#4f7cff">Sale</text>
+  <text x="56" y="136" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">Atlas</text>
+  <text x="56" y="152" font-family="Arial, sans-serif" font-size="9" letter-spacing="2" fill="#94a3b8">AI-POWERED RETAIL</text>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#475569">
+    <text x="150" y="136">New In</text>
+    <text x="214" y="136">Women</text>
+    <text x="278" y="136">Men</text>
+    <text x="342" y="136">Accessories</text>
+    <text x="430" y="136" fill="#3b63e0" font-weight="600">Sale</text>
   </g>
-  <rect x="380" y="112" width="220" height="34" rx="17" fill="#0c0c10" stroke="#26262e"/>
-  <circle cx="404" cy="129" r="4" fill="none" stroke="#55555f" stroke-width="2"/>
-  <path d="M407 132l6 6" stroke="#55555f" stroke-width="2" stroke-linecap="round"/>
-  <text x="420" y="134" font-family="Arial, sans-serif" font-size="12" fill="#55555f">Search products…</text>
+  <rect x="480" y="118" width="260" height="34" rx="17" fill="#ffffff" stroke="#e2e8f0"/>
+  <circle cx="504" cy="135" r="4" fill="none" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M507 138l6 6" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  <text x="518" y="140" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Search products…</text>
   <g>
-    <circle cx="680" cy="129" r="17" fill="#15151b" stroke="#26262e"/>
-    <path d="M680 122v14M673 129h14" stroke="#a1a1a6" stroke-width="2" stroke-linecap="round"/>
-    <circle cx="760" cy="129" r="17" fill="#15151b" stroke="#26262e"/>
-    <circle cx="760" cy="126" r="5" fill="none" stroke="#a1a1a6" stroke-width="2"/>
-    <path d="M758 130l5 5" stroke="#a1a1a6" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="820" cy="135" r="17" fill="#ffffff" stroke="#e2e8f0"/>
+    <path d="M820 129c-3 0-5 2-5 5v1l-1 5h12l-1-5v-1c0-3-2-5-5-5z" fill="#475569"/>
+    <circle cx="820" cy="137" r="3" fill="#475569"/>
+    <circle cx="838" cy="124" r="5" fill="#ef4444"/>
+    <text x="838" y="127" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="700" fill="#ffffff">3</text>
+    <circle cx="880" cy="135" r="17" fill="#ffffff" stroke="#e2e8f0"/>
+    <path d="M880 128c-2 0-4 1-4 3 0 1 0 2 1 2l-3 10h12l-3-10c1-1 1-1 1-2 0-2-2-3-4-3z" fill="#475569"/>
+    <circle cx="880" cy="138" r="4" fill="none" stroke="#475569" stroke-width="1.4"/>
+    <circle cx="928" cy="135" r="17" fill="url(#acc)"/>
+    <text x="928" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#ffffff">AM</text>
   </g>
-  <rect x="824" y="112" width="108" height="34" rx="17" fill="url(#acc)"/>
-  <text x="878" y="134" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Checkout</text>
 
   <!-- Hero banner -->
-  <rect x="40" y="166" width="1120" height="148" rx="20" fill="url(#banner)" stroke="#26346b"/>
-  <text x="72" y="212" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#f5f5f4">Summer Drop · up to 40% off</text>
-  <text x="72" y="244" font-family="Arial, sans-serif" font-size="14" fill="#a9b6ea">AI-powered picks, curated from 10,000+ products · free shipping over $50</text>
-  <rect x="72" y="266" width="132" height="36" rx="18" fill="#4f7cff"/>
-  <text x="138" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Shop the drop</text>
-  <rect x="1070" y="178" width="70" height="24" rx="12" fill="#f43f5e"/>
-  <text x="1105" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff">-40%</text>
+  <rect x="40" y="170" width="1120" height="148" rx="20" fill="url(#hero)" stroke="#e0e7ff" filter="url(#card)"/>
+  <rect x="72" y="194" width="98" height="24" rx="12" fill="#1e1b4b"/>
+  <text x="121" y="211" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#a5b4fc">Summer Drop</text>
+  <text x="72" y="250" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#0f172a">Up to 40% off</text>
+  <text x="72" y="278" font-family="Arial, sans-serif" font-size="14" fill="#64748b">AI-curated picks from 10,000+ products · free shipping over $50</text>
+  <rect x="72" y="292" width="132" height="36" rx="18" fill="url(#acc)"/>
+  <text x="138" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Shop the drop</text>
+
+  <!-- Floating sneaker -->
+  <g filter="url(#prodsh)">
+    <ellipse cx="940" cy="310" rx="88" ry="12" fill="#64748b" opacity="0.25"/>
+    <path d="M872 298 C872 262 894 244 928 242 L956 242 C990 244 1004 262 1006 286 L1008 302 C1008 306 1006 308 1002 308 L878 308 C874 308 872 306 872 302 Z" fill="url(#sneak1)"/>
+    <path d="M872 302 L872 296 C900 290 930 290 958 296 C978 300 992 304 1008 308 L878 308 Z" fill="#5f6878"/>
+    <path d="M884 258 C916 250 948 250 978 258 L980 268 C948 260 918 260 886 268 Z" fill="#3a4150"/>
+    <path d="M890 292 C920 282 956 282 990 292 L988 298 C956 288 922 288 892 298 Z" fill="url(#sneak2)"/>
+    <path d="M902 236 L916 236 M902 244 L916 244" stroke="#b9c0cd" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="886" cy="258" r="6" fill="#d7dce6"/>
+  </g>
+  <rect x="868" y="196" width="70" height="24" rx="12" fill="#ef4444"/>
+  <text x="903" y="213" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff">-40%</text>
+  <path d="M786 256l-2-2 2 9 1.6-3.2 4.2 2.3z" fill="#0f172a" stroke="#ffffff" stroke-width="1" stroke-linejoin="round"/>
+
+  <!-- Category chips -->
+  <g font-family="Arial, sans-serif" font-size="12">
+    <rect x="40" y="334" width="88" height="30" rx="15" fill="url(#acc)"/>
+    <text x="84" y="354" text-anchor="middle" fill="#ffffff" font-weight="600">All items</text>
+    <rect x="136" y="334" width="92" height="30" rx="15" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="182" y="354" text-anchor="middle" fill="#475569">Sneakers</text>
+    <rect x="236" y="334" width="76" height="30" rx="15" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="274" y="354" text-anchor="middle" fill="#475569">Watches</text>
+    <rect x="320" y="334" width="96" height="30" rx="15" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="368" y="354" text-anchor="middle" fill="#475569">Audio</text>
+    <rect x="424" y="334" width="96" height="30" rx="15" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="472" y="354" text-anchor="middle" fill="#475569">Bags</text>
+    <text x="1136" y="354" text-anchor="end" fill="#3b63e0" font-size="12">24,312 products</text>
+  </g>
 
   <!-- Product cards -->
   <g font-family="Arial, sans-serif">
-    <!-- 1 -->
-    <rect x="40" y="334" width="356" height="220" rx="18" fill="#14141a" stroke="#1f1f27"/>
-    <rect x="56" y="350" width="324" height="120" rx="12" fill="url(#prod1)"/>
-    <path d="M116 410l60 0-20-30z" fill="#5b86ff" opacity="0.35"/>
-    <path d="M196 410l60 0-20-30z" fill="#5b86ff" opacity="0.25"/>
-    <rect x="72" y="488" width="120" height="12" rx="6" fill="#e8e8ec"/>
-    <text x="72" y="522" fill="#f5f5f4" font-size="15" font-weight="600">Cloud Runner Sneakers</text>
-    <text x="72" y="542" fill="#4f7cff" font-size="14" font-weight="700">$89.00</text>
-    <text x="220" y="542" fill="#6b6b76" font-size="12">$119.00</text>
-    <rect x="288" y="484" width="76" height="22" rx="11" fill="#f43f5e"/>
-    <text x="326" y="500" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="700">-25%</text>
+    <!-- 1 · Sneakers -->
+    <rect x="40" y="378" width="356" height="200" rx="18" fill="#ffffff" stroke="#e2e8f0" filter="url(#card)"/>
+    <rect x="56" y="394" width="324" height="94" rx="12" fill="#f1f5f9"/>
+    <ellipse cx="210" cy="470" rx="74" ry="9" fill="#64748b" opacity="0.18"/>
+    <path d="M162 456 C162 434 176 422 200 420 L220 420 C244 422 254 434 254 450 L254 456 C254 458 252 460 250 460 L166 460 C164 460 162 458 162 456 Z" fill="url(#sneak1)"/>
+    <path d="M162 458 L162 456 C184 452 204 452 226 456 C238 458 246 460 254 460 L166 460 Z" fill="#5f6878"/>
+    <path d="M170 426 C194 420 220 420 244 426 L245 432 C220 426 196 426 172 432 Z" fill="#3a4150"/>
+    <path d="M176 450 C198 444 224 444 246 450 L246 454 C224 448 200 448 178 454 Z" fill="url(#sneak2)"/>
+    <path d="M184 414 L194 414 M184 420 L194 420" stroke="#b9c0cd" stroke-width="2.4" stroke-linecap="round"/>
+    <text x="72" y="516" font-family="Arial, sans-serif" font-size="10" letter-spacing="1" fill="#94a3b8">NOVA ATHLETICS</text>
+    <text x="72" y="538" fill="#0f172a" font-size="15" font-weight="600">Cloud Runner Sneakers</text>
     <g>
-      <path d="M100 460l4 8 8 1-6 6 1 8-7-4-7 4 1-8-6-6 8-1z" fill="#febc2e"/>
-      <path d="M112 460l4 8 8 1-6 6 1 8-7-4-7 4 1-8-6-6 8-1z" fill="#febc2e"/>
-      <path d="M124 460l4 8 8 1-6 6 1 8-7-4-7 4 1-8-6-6 8-1z" fill="#febc2e"/>
-      <path d="M136 460l4 8 8 1-6 6 1 8-7-4-7 4 1-8-6-6 8-1z" fill="#febc2e"/>
-      <path d="M148 460l4 8 8 1-6 6 1 8-7-4-7 4 1-8-6-6 8-1z" fill="#3a3a44"/>
+      <path d="M72 550l4 7 8 1-6 6 1 8-7-4-7 4 1-8-6-6 8-1z" fill="#f59e0b"/>
+      <path d="M84 550l4 7 8 1-6 6 1 8-7-4-7 4 1-8-6-6 8-1z" fill="#f59e0b"/>
+      <path d="M96 550l4 7 8 1-6 6 1 8-7-4-7 4 1-8-6-6 8-1z" fill="#f59e0b"/>
+      <path d="M108 550l4 7 8 1-6 6 1 8-7-4-7 4 1-8-6-6 8-1z" fill="#f59e0b"/>
+      <path d="M120 550l4 7 8 1-6 6 1 8-7-4-7 4 1-8-6-6 8-1z" fill="#e2e8f0"/>
     </g>
+    <text x="132" y="560" fill="#94a3b8" font-size="11">(2,140)</text>
+    <text x="72" y="574" fill="#3b63e0" font-size="15" font-weight="700">$89.00</text>
+    <text x="126" y="574" fill="#94a3b8" font-size="12" text-decoration="line-through">$119.00</text>
+    <rect x="184" y="560" width="72" height="26" rx="13" fill="#fef2f2"/>
+    <text x="220" y="578" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="700">-25%</text>
+    <circle cx="320" cy="573" r="15" fill="#eef2ff"/>
+    <path d="M311 571l3 0-1 10h9l-1-10z" stroke="#3b63e0" stroke-width="1.6" fill="none"/>
+    <path d="M306 565c4 5 9 5 13 0 4 5 9 5 13 0" stroke="#3b63e0" stroke-width="1.6" fill="none"/>
 
-    <!-- 2 -->
-    <rect x="412" y="334" width="356" height="220" rx="18" fill="#14141a" stroke="#1f1f27"/>
-    <rect x="428" y="350" width="324" height="120" rx="12" fill="url(#prod2)"/>
-    <rect x="520" y="386" width="140" height="48" rx="10" fill="#6b4a33"/>
-    <rect x="540" y="404" width="100" height="12" rx="6" fill="#3a2a1e"/>
-    <rect x="444" y="488" width="140" height="12" rx="6" fill="#e8e8ec"/>
-    <text x="444" y="522" fill="#f5f5f4" font-size="15" font-weight="600">Heritage Leather Tote</text>
-    <text x="444" y="542" fill="#4f7cff" font-size="14" font-weight="700">$149.00</text>
-    <text x="700" y="542" text-anchor="end" fill="#34d399" font-size="11">Low stock</text>
+    <!-- 2 · Watch -->
+    <rect x="412" y="378" width="356" height="200" rx="18" fill="#ffffff" stroke="#e2e8f0" filter="url(#card)"/>
+    <rect x="428" y="394" width="324" height="94" rx="12" fill="url(#watchb)"/>
+    <rect x="582" y="396" width="16" height="10" rx="4" fill="#3a2418"/>
+    <rect x="582" y="478" width="16" height="12" rx="4" fill="#3a2418"/>
+    <circle cx="590" cy="442" r="42" fill="url(#watchf)" stroke="#d9b26b" stroke-width="5"/>
+    <circle cx="590" cy="442" r="34" fill="#ffffff"/>
+    <g stroke="#475569" stroke-width="1.4">
+      <path d="M590 412v4M590 468v4M562 442h4M614 442h4M566 418l3 3M611 463l3 3M614 418l-3 3M569 463l-3 3"/>
+    </g>
+    <path d="M590 442 L590 422" stroke="#0f172a" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M590 442 L604 450" stroke="#3b63e0" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="590" cy="442" r="3" fill="#0f172a"/>
+    <rect x="626" y="430" width="8" height="18" rx="3" fill="#d9b26b"/>
+    <rect x="700" y="404" width="48" height="22" rx="11" fill="#ffffff"/>
+    <text x="724" y="420" text-anchor="middle" font-size="10" font-weight="600" fill="#0f172a">★ 4.9</text>
+    <text x="444" y="516" font-family="Arial, sans-serif" font-size="10" letter-spacing="1" fill="#94a3b8">MERIDIAN</text>
+    <text x="444" y="538" fill="#0f172a" font-size="15" font-weight="600">Chronograph Steel</text>
+    <text x="444" y="558" fill="#94a3b8" font-size="11">Water resistant 100m · Sapphire</text>
+    <text x="444" y="574" fill="#3b63e0" font-size="15" font-weight="700">$149.00</text>
+    <rect x="556" y="560" width="76" height="26" rx="13" fill="#fffbeb"/>
+    <text x="594" y="578" text-anchor="middle" font-size="11" font-weight="600" fill="#b45309">Low stock</text>
+    <circle cx="676" cy="573" r="15" fill="#eef2ff"/>
+    <path d="M667 571l3 0-1 10h9l-1-10z" stroke="#3b63e0" stroke-width="1.6" fill="none"/>
+    <path d="M662 565c4 5 9 5 13 0 4 5 9 5 13 0" stroke="#3b63e0" stroke-width="1.6" fill="none"/>
 
-    <!-- 3 -->
-    <rect x="784" y="334" width="376" height="220" rx="18" fill="#14141a" stroke="#1f1f27"/>
-    <rect x="800" y="350" width="344" height="120" rx="12" fill="url(#prod3)"/>
-    <rect x="884" y="380" width="176" height="30" rx="8" fill="#1d2a38"/>
-    <rect x="884" y="420" width="120" height="30" rx="8" fill="#16202b"/>
-    <rect x="816" y="488" width="150" height="12" rx="6" fill="#e8e8ec"/>
-    <text x="816" y="522" fill="#f5f5f4" font-size="15" font-weight="600">Everyday Minimal Backpack</text>
-    <text x="816" y="542" fill="#4f7cff" font-size="14" font-weight="700">$64.00</text>
+    <!-- 3 · Headphones -->
+    <rect x="784" y="378" width="376" height="200" rx="18" fill="#ffffff" stroke="#e2e8f0" filter="url(#card)"/>
+    <rect x="800" y="394" width="344" height="94" rx="12" fill="url(#prod3)"/>
+    <rect x="812" y="404" width="52" height="22" rx="11" fill="#10b981"/>
+    <text x="838" y="419" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#ffffff">New</text>
+    <path d="M906 478 C906 428 874 406 842 406 C824 406 812 418 812 432 L812 446" stroke="#8a93a5" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M906 478 C906 428 874 406 842 406 C824 406 812 418 812 432 L812 440" stroke="#d7dce6" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <rect x="788" y="430" width="40" height="52" rx="16" fill="#2c3a4c"/>
+    <rect x="794" y="438" width="28" height="36" rx="12" fill="#1a2433"/>
+    <rect x="956" y="430" width="40" height="52" rx="16" fill="#2c3a4c"/>
+    <rect x="962" y="438" width="28" height="36" rx="12" fill="#1a2433"/>
+    <path d="M844 430 C864 442 900 442 920 430" stroke="#8a93a5" stroke-width="2.4" fill="none"/>
+    <text x="816" y="516" font-family="Arial, sans-serif" font-size="10" letter-spacing="1" fill="#94a3b8">ECHOLINE</text>
+    <text x="816" y="538" fill="#0f172a" font-size="15" font-weight="600">Noise-cancel Pro</text>
+    <text x="816" y="558" fill="#94a3b8" font-size="11">40h battery · Spatial audio</text>
+    <text x="816" y="574" fill="#3b63e0" font-size="15" font-weight="700">$64.00</text>
+    <text x="878" y="574" fill="#94a3b8" font-size="12" text-decoration="line-through">$89.00</text>
+    <circle cx="1040" cy="573" r="15" fill="#eef2ff"/>
+    <path d="M1031 571l3 0-1 10h9l-1-10z" stroke="#3b63e0" stroke-width="1.6" fill="none"/>
+    <path d="M1026 565c4 5 9 5 13 0 4 5 9 5 13 0" stroke="#3b63e0" stroke-width="1.6" fill="none"/>
   </g>
+
+  <!-- Added to cart toast -->
+  <rect x="896" y="368" width="232" height="52" rx="14" fill="#0f172a" filter="url(#card)"/>
+  <circle cx="922" cy="394" r="12" fill="#10b981"/>
+  <path d="M916 394l4 4 8-8" stroke="#ffffff" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <text x="944" y="390" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#ffffff">Added to cart</text>
+  <text x="944" y="406" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">Noise-cancel Pro</text>
 
   <!-- Feature strip -->
   <g font-family="Arial, sans-serif">
-    <rect x="40" y="574" width="356" height="62" rx="16" fill="#14141a" stroke="#1f1f27"/>
-    <circle cx="72" cy="605" r="12" fill="#20263a"/>
-    <path d="M66 605l4 4 8-8" stroke="#4f7cff" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-    <text x="94" y="600" fill="#e8e8ec" font-size="13" font-weight="600">AI recommendation engine</text>
-    <text x="94" y="616" fill="#8a8a94" font-size="11">Personalized for every visitor · +32% AOV</text>
+    <rect x="40" y="590" width="356" height="50" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="72" cy="615" r="12" fill="#eef2ff"/>
+    <path d="M66 615l4 4 8-8" stroke="#3b63e0" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <text x="94" y="610" fill="#0f172a" font-size="13" font-weight="600">AI recommendation engine</text>
+    <text x="94" y="626" fill="#64748b" font-size="11">Personalized for every visitor · +32% AOV</text>
 
-    <rect x="412" y="574" width="356" height="62" rx="16" fill="#14141a" stroke="#1f1f27"/>
-    <circle cx="444" cy="605" r="12" fill="#20263a"/>
-    <rect x="438" y="599" width="12" height="12" rx="2" fill="#4f7cff"/>
-    <text x="466" y="600" fill="#e8e8ec" font-size="13" font-weight="600">One-tap checkout</text>
-    <text x="466" y="616" fill="#8a8a94" font-size="11">No account needed · 0.4s time to pay</text>
+    <rect x="412" y="590" width="356" height="50" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="444" cy="615" r="12" fill="#eef2ff"/>
+    <rect x="438" y="609" width="12" height="12" rx="2" fill="#3b63e0"/>
+    <text x="466" y="610" fill="#0f172a" font-size="13" font-weight="600">One-tap checkout</text>
+    <text x="466" y="626" fill="#64748b" font-size="11">No account needed · 0.4s time to pay</text>
 
-    <rect x="784" y="574" width="376" height="62" rx="16" fill="#14141a" stroke="#1f1f27"/>
-    <circle cx="816" cy="605" r="12" fill="#20263a"/>
-    <path d="M810 605c6-6 14-6 20 0" stroke="#4f7cff" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-    <path d="M830 601l3 4 7-8" stroke="#4f7cff" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-    <text x="838" y="600" fill="#e8e8ec" font-size="13" font-weight="600">Same-day fulfillment</text>
-    <text x="838" y="616" fill="#8a8a94" font-size="11">Warehouse synced · 99.9% on-time</text>
+    <rect x="784" y="590" width="376" height="50" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="816" cy="615" r="12" fill="#eef2ff"/>
+    <path d="M810 615c6-6 14-6 20 0" stroke="#3b63e0" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <path d="M830 611l3 4 7-8" stroke="#3b63e0" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <text x="838" y="610" fill="#0f172a" font-size="13" font-weight="600">Same-day fulfillment</text>
+    <text x="838" y="626" fill="#64748b" font-size="11">Warehouse synced · 99.9% on-time</text>
   </g>
+
+  <rect x="24" y="24" width="1152" height="627" rx="18" fill="#000000" opacity="0.04"/>
 </svg>

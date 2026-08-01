@@ -31,7 +31,7 @@ export default function Products() {
           </Reveal>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
+        <div className="mx-auto mt-14 grid max-w-4xl gap-6 md:grid-cols-2">
           {projects.map((project, i) => (
             <motion.a
               key={project.title}
