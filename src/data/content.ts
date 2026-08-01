@@ -61,7 +61,7 @@ export type SocialLink = {
 export const site = {
   name: 'Umair Qadeer',
   role: 'Full-Stack Developer · MERN & Next.js',
-  email: 'hello@umairqadeer.com',
+  email: 'muhammadumair.coding@gmail.com',
   tagline: "I build fast, scalable web apps for startups and e-commerce brands.",
   bio: [
     "I'm a full-stack developer with 5+ years of experience building production web apps for startups, agencies, and e-commerce brands. I specialize in the MERN stack (MongoDB, Express, React, Node.js) and Next.js.",
@@ -89,7 +89,7 @@ export const stats: Stat[] = [
 
 /** Upwork trust details — shown as badges and in the reviews section. */
 export const upwork = {
-  profileUrl: 'https://www.upwork.com/freelancers/mumairqadeer',
+  profileUrl: 'https://www.upwork.com/freelancers/~01f754348cf6abfb13',
   rating: 5.0,
   reviews: 12,
   topRated: true,
@@ -232,6 +232,6 @@ export const testimonials: Testimonial[] = [
 
 export const socialLinks: SocialLink[] = [
   { label: 'GitHub', href: 'https://github.com/MUmairQadeer', external: true },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mumairqadeer', external: true },
-  { label: 'Upwork', href: 'https://www.upwork.com/freelancers/mumairqadeer', external: true },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/muhammadumair-dev', external: true },
+  { label: 'Upwork', href: 'https://www.upwork.com/freelancers/~01f754348cf6abfb13', external: true },
 ]
