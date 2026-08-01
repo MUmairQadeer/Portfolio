@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a0a0d"/>
+      <stop offset="1" stop-color="#0f1424"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#4f7cff"/>
+      <stop offset="1" stop-color="#3b63e0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g stroke="#ffffff" stroke-opacity="0.05">
+    <path d="M0 112h1200M0 224h1200M0 336h1200M0 448h1200M0 560h1200"/>
+    <path d="M150 0v675M300 0v675M450 0v675M600 0v675M750 0v675M900 0v675M1050 0v675"/>
+  </g>
+
+  <!-- Window + chrome -->
+  <rect x="24" y="24" width="1152" height="627" rx="18" fill="#0e0e11"/>
+  <rect x="24" y="24" width="1152" height="52" rx="18" fill="#121216"/>
+  <rect x="24" y="52" width="1152" height="24" fill="#121216"/>
+  <circle cx="54" cy="50" r="6" fill="#2c2c34"/>
+  <circle cx="76" cy="50" r="6" fill="#2c2c34"/>
+  <circle cx="98" cy="50" r="6" fill="#4f7cff"/>
+  <rect x="430" y="34" width="340" height="30" rx="15" fill="#0c0c0f" stroke="#1f1f25"/>
+  <text x="600" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#5c5c64">aura.care/session</text>
+
+  <!-- Left: appointments -->
+  <rect x="40" y="92" width="300" height="543" rx="14" fill="#121216"/>
+  <text x="60" y="126" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#f5f5f4">Today's appointments</text>
+  <text x="60" y="146" font-family="Arial, sans-serif" font-size="12" fill="#7d7d86">12 scheduled · 3 in session</text>
+
+  <g>
+    <rect x="56" y="170" width="268" height="74" rx="12" fill="#15151a" stroke="#1f1f25"/>
+    <rect x="72" y="186" width="44" height="12" rx="6" fill="#33333d"/>
+    <rect x="72" y="206" width="90" height="10" rx="5" fill="#2a2a33"/>
+    <rect x="256" y="186" width="54" height="20" rx="10" fill="#4f7cff"/>
+    <text x="283" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#ffffff">In call</text>
+
+    <rect x="56" y="256" width="268" height="74" rx="12" fill="#15151a" stroke="#1f1f25"/>
+    <rect x="72" y="272" width="44" height="12" rx="6" fill="#33333d"/>
+    <rect x="72" y="292" width="110" height="10" rx="5" fill="#2a2a33"/>
+    <rect x="256" y="272" width="54" height="20" rx="10" fill="#1f1f26" stroke="#26262c"/>
+    <text x="283" y="286" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7d7d86">Up next</text>
+
+    <rect x="56" y="342" width="268" height="74" rx="12" fill="#15151a" stroke="#1f1f25"/>
+    <rect x="72" y="358" width="44" height="12" rx="6" fill="#33333d"/>
+    <rect x="72" y="378" width="80" height="10" rx="5" fill="#2a2a33"/>
+    <rect x="256" y="358" width="54" height="20" rx="10" fill="#1f1f26" stroke="#26262c"/>
+    <text x="283" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7d7d86">Up next</text>
+
+    <rect x="56" y="428" width="268" height="74" rx="12" fill="#15151a" stroke="#1f1f25"/>
+    <rect x="72" y="444" width="44" height="12" rx="6" fill="#33333d"/>
+    <rect x="72" y="464" width="100" height="10" rx="5" fill="#2a2a33"/>
+    <rect x="256" y="444" width="54" height="20" rx="10" fill="#1f1f26" stroke="#26262c"/>
+    <text x="283" y="458" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7d7d86">Booked</text>
+
+    <rect x="56" y="526" width="268" height="34" rx="17" fill="url(#acc)"/>
+    <text x="190" y="548" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">+ New appointment</text>
+  </g>
+
+  <!-- Right: video call -->
+  <rect x="356" y="92" width="788" height="543" rx="14" fill="#101014"/>
+  <g stroke="#ffffff" stroke-opacity="0.05">
+    <path d="M356 224h788M356 356h788M356 488h788"/>
+    <path d="M600 92v543M788 92v543"/>
+  </g>
+  <rect x="356" y="92" width="120" height="36" rx="18" fill="#c62828"/>
+  <text x="416" y="116" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">● LIVE</text>
+  <text x="800" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#f5f5f4">Sarah Mitchell — Video Visit</text>
+  <text x="800" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7d7d86">Dr. Amin · Cardiology · 24 min</text>
+
+  <!-- Patient video -->
+  <rect x="604" y="196" width="360" height="360" rx="18" fill="#16161c" stroke="#1f1f25"/>
+  <circle cx="784" cy="360" r="56" fill="#23232c"/>
+  <path d="M784 296c-30 0-54 24-54 54 0 11 4 22 11 30h86c7-8 11-19 11-30 0-30-24-54-54-54z" fill="#4f7cff" opacity="0.45"/>
+  <rect x="744" y="516" width="80" height="22" rx="11" fill="#1f1f26" stroke="#26262c"/>
+  <text x="784" y="532" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#a1a1a6">Patient</text>
+
+  <!-- Doctor self-view -->
+  <rect x="604" y="196" width="140" height="94" rx="12" fill="#14141a" stroke="#1f1f25"/>
+  <circle cx="674" cy="228" r="16" fill="#2c2c36"/>
+  <path d="M674 212c-9 0-16 7-16 16 0 3 1 6 3 9h26c2-3 3-6 3-9 0-9-7-16-16-16z" fill="#4f7cff" opacity="0.5"/>
+  <rect x="622" y="252" width="56" height="20" rx="10" fill="#1f1f26" stroke="#26262c"/>
+  <text x="650" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#a1a1a6">You</text>
+
+  <!-- Call controls -->
+  <g>
+    <circle cx="700" cy="612" r="26" fill="#1f1f26" stroke="#26262c"/>
+    <rect x="688" y="602" width="24" height="8" rx="4" fill="#a1a1a6"/>
+    <circle cx="780" cy="612" r="26" fill="#1f1f26" stroke="#26262c"/>
+    <path d="M774 606l12 12M786 606l-12 12" stroke="#a1a1a6" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="860" cy="612" r="26" fill="#c62828"/>
+    <path d="M860 602c-10 0-18 8-18 18v4l16-6v-8l-16-6v8" fill="none" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+</svg>
