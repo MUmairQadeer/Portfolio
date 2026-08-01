@@ -91,7 +91,7 @@ export default function About() {
             <div className="lg:sticky lg:top-28">
               <TerminalCard />
               <p className="mt-5 text-center text-xs text-faint">
-                {site.location} · UTC+5 · replies within hours
+                {site.location} · UTC+5 · usually replies within 30 minutes
               </p>
             </div>
           </Reveal>

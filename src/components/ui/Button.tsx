@@ -17,6 +17,7 @@ type ButtonProps = {
   href?: string
   variant?: ButtonVariant
   external?: boolean
+  disabled?: boolean
   className?: string
   children: ReactNode
 } & Omit<React.ComponentPropsWithoutRef<'a'>, 'href' | 'children'>
@@ -29,11 +30,18 @@ export default function Button({
   href,
   variant = 'primary',
   external,
+  disabled,
   className,
   children,
   ...rest
 }: ButtonProps) {
-  const classes = cn(base, variants[variant], 'hover:-translate-y-0.5 active:translate-y-0', className)
+  const classes = cn(
+    base,
+    variants[variant],
+    'hover:-translate-y-0.5 active:translate-y-0',
+    disabled && 'pointer-events-none opacity-60',
+    className,
+  )
 
   if (href) {
     return (
@@ -49,7 +57,7 @@ export default function Button({
   }
 
   return (
-    <button type="button" className={classes} {...(rest as React.ComponentPropsWithoutRef<'button'>)}>
+    <button type="button" disabled={disabled} className={classes} {...(rest as React.ComponentPropsWithoutRef<'button'>)}>
       {children}
     </button>
   )

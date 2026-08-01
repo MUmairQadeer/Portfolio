@@ -161,8 +161,8 @@ export default function Navbar() {
               >
                 <Button
                   href="#contact"
-                  className="w-full"
                   onClick={() => setOpen(false)}
+                  className="w-full"
                 >
                   Hire Me <ArrowUpRight size={16} />
                 </Button>
